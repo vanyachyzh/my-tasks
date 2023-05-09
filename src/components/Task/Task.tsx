@@ -1,5 +1,5 @@
 import { Button, Typography } from "@mui/material";
-import { TaskInfo } from "../../../types/TaskInfo";
+import { TaskInfo } from "../../types/TaskInfo";
 
 type Props = {
   task: TaskInfo,
@@ -8,9 +8,9 @@ type Props = {
 export const Task: React.FC<Props> = ({ task }) => {
   return (
     <Button
-      variant="text"
+      variant="outlined"
       sx={{
-        width: "300px",
+        width: "250px",
         display: "flex",
         flexDirection: "column",
         alignItems: "start",

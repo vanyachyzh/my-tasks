@@ -1,4 +1,4 @@
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, IconButton } from "@mui/material";
 import './ActionBox.scss';
 
 export const ActionBox = () => {
@@ -29,8 +29,10 @@ export const ActionBox = () => {
           Редагувати
         </Button>
       </div>
+
+      <span>📝📌📅📆🔨💼📂📋</span>
+      
       <TextField
-        id="outlined-basic"
         label="Шукати"
         variant="outlined"
       />

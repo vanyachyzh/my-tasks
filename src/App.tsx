@@ -1,6 +1,8 @@
 import './App.scss';
 import { ActionBox } from './components/ActionBox/ActionBox';
-import { Task } from './components/ActionBox/Task/Task';
+import { Task } from './components/Task/Task';
+import { TaskList } from './components/TaskList/TaskList';
+import { WorkSpace } from './components/WorkSpace/WorkSpace';
 
 const task = {
   title: "dfksdfkj",
@@ -11,8 +13,15 @@ const task = {
 function App() {
   return (
     <div className="app">
-      <ActionBox />
-      <Task task={task}/>
+      <div className='app__action-section'>
+        <ActionBox />
+      </div>
+
+      <div className='app__task-section'>
+        <TaskList tasks={[task, task, task, task]} />
+
+        <WorkSpace title='' body='' />
+      </div>
     </div>
   );
 }
