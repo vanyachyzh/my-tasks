@@ -1,5 +1,5 @@
-import { Button, Typography } from "@mui/material";
 import { TaskInfo } from "../../types/TaskInfo";
+import './Task.scss';
 
 type Props = {
   task: TaskInfo,
@@ -7,35 +7,13 @@ type Props = {
 
 export const Task: React.FC<Props> = ({ task }) => {
   return (
-    <Button
-      variant="outlined"
-      sx={{
-        width: "250px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "start",
-      }}
-    >
-      <Typography
-        variant="h5"
-        align="left"
-      >
-        {task.title}
-      </Typography>
+    <button className="task">
+      <span className="task__title">{task.title}</span>
 
-      <Typography
-        variant="subtitle1"
-        align="left"
-      >
-        {task.body}
-      </Typography>
-
-      <Typography
-        variant="body2"
-        align="left"
-      >
-        {task.date}
-      </Typography>
-    </Button>
+      <div className="task__extra">
+        <span className="task__date">{task.date}</span>
+        <span className="task__body">{task.body}</span>
+      </div>
+    </button>
   )
 };

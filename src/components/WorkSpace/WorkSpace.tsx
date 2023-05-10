@@ -7,22 +7,21 @@ type Props = {
 };
 
 
-export const WorkSpace: React.FC<Props> = ({ title, body }) => (
+export const WorkSpace = () => (
   <div className="work-space">
-    <TextField
-      label="Заголовок"
-      variant="outlined"
-      sx={{
-        width: "100%",
-        marginBottom: "10px"
-      }}
+    <span className="work-space__date">30.20.30</span>
+
+    <input
+      className="work-space__title"
+      type="text"
+      placeholder="Title"
     />
 
-    <TextField
-      label="Завдання"
-      multiline
-      inputProps={{ style: { height: "200px" } }}
-      sx={{ width: "100%" }}
-    />
+    <textarea
+      className="work-space__body"
+      placeholder="Text"
+    >
+
+    </textarea>
   </div>
 );

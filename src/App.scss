@@ -1,17 +1,25 @@
 @import './styles/reset.scss';
 
 .app {
-  width: 1000px;
+  width: 100%;
+  max-width: 800px;
+  height: 100vh;
   margin: 0 auto;
-  padding: 20px;
-
-  &__action-section {
-    margin-bottom: 40px;
-  }
+  overflow-y: hidden;
 
   &__task-section {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    height: 100%;
+
+  }
+
+  &__task-list {
+    width: 40%;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  &__work-space {
+    width: 60%;
   }
 }

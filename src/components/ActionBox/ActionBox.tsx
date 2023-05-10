@@ -1,40 +1,19 @@
-import { Button, TextField, IconButton } from "@mui/material";
+import { Button } from '../Button/Button';
 import './ActionBox.scss';
 
 export const ActionBox = () => {
   return (
     <div className="action-box">
-      <div className="action-box__buttons">
-        <Button
-          variant="contained"
-          color="success"
-          size="large"
-        >
-          Додати
-        </Button>
-
-        <Button
-          variant="contained"
-          color="error"
-          size="large"
-        >
-          Видалити
-        </Button>
-
-        <Button
-          variant="contained"
-          color="warning"
-          size="large"
-        >
-          Редагувати
-        </Button>
+      <div className='action-box__buttons'>
+        <Button type="add" />
+        <Button type="edit" />
+        <Button type="delete" />
       </div>
 
-      <span>📝📌📅📆🔨💼📂📋</span>
-      
-      <TextField
-        label="Шукати"
-        variant="outlined"
+      <input
+        className='action-box__input'
+        type="text"
+        placeholder='Search'
       />
     </div>
   )

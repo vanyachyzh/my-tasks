@@ -2,10 +2,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: gray;
+  padding: 4px;
+  border-bottom: 2px solid rgb(113, 113, 113);
 
   &__buttons {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+  }
+
+  &__input {
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    border: none;
+    background-color: rgb(214, 214, 214);
+    color: #979797;
+
+    &::placeholder {
+      text-align: center;
+      color: #a9a9a9;
+    }
+
+    &:focus::placeholder {
+      text-align: center;
+      color: rgb(214, 214, 214);
+    }
   }
 }
